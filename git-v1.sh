@@ -1,19 +1,6 @@
 #!/bin/bash
 #set -e
-##################################################################################################################
-# Author	:	Erik Dubois
-# Website	:	https://www.erikdubois.be
-# Website	:	https://www.arcolinux.info
-# Website	:	https://www.arcolinux.com
-# Website	:	https://www.arcolinuxd.com
-# Website	:	https://www.arcolinuxb.com
-# Website	:	https://www.arcolinuxiso.com
-# Website	:	https://www.arcolinuxforum.com
-##################################################################################################################
-#
-#   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. RUN AT YOUR OWN RISK.
-#
-##################################################################################################################
+# Author: Erik Dubois (original), Sergey Ar.
 
 # checking if I have the latest files from github
 echo "Checking for newer files online first"
@@ -23,9 +10,9 @@ git pull
 git add --all .
 
 # Give a comment to the commit if you want
-echo "####################################"
-echo "Write your commit comment!"
-echo "####################################"
+echo
+echo "Write commit message:"
+echo
 
 read input
 
@@ -38,6 +25,6 @@ git commit -m "$input"
 git push -u origin main
 
 
-echo "################################################################"
-echo "###################    Git Push Done      ######################"
-echo "################################################################"
+echo
+echo "Git Push Done"
+echo
